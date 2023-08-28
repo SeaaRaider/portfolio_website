@@ -1,3 +1,8 @@
+:root
+{
+    --green: #348d7a;
+}
+
 body
 {
     margin: 0;
@@ -13,17 +18,47 @@ body
     float: left;
 }
 
+.left-navbar-credentials
+{
+    height: 200px;
+    border-bottom: 0.5px solid rgb(218, 218, 218);
+}
+
+nav
+{
+    height: 600px;
+    width: 100px;
+    text-align: center;
+}
+
+nav ol
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ol li
+{
+    padding: 12px 0 12px 0;
+}
+
 .top-head-wrap
 {
-    margin-left: 200px;
+    overflow: auto;
 }
 
 .top-head-message
 {
+    padding: 4.5vh;
     text-align: center;
+    background-color: var(--green);
+    font-size: 50px;
+    color: white;
 }
 
 .content
 {
-
+    overflow: auto;
+    text-align: center;
 }

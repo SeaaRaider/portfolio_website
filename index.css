@@ -16,6 +16,20 @@ body
 .left-navbar-wrap
 {
     float: left;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.left-navbar-wrap:hover
+{
+    overflow: visible;
+    width: 300px;
+}
+
+.left-navbar-wrap:hover ~ .mainwrap
+{
+    opacity: 0.6;
+    filter: blur(3px);
 }
 
 .left-navbar-credentials

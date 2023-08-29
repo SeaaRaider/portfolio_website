@@ -10,14 +10,16 @@ body
 
 .page
 {
-    width: 100%;
+    position: relative;
 }
 
 .left-navbar-wrap
 {
     float: left;
     overflow: hidden;
-    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
 }
 
 .left-navbar-wrap:hover
@@ -57,9 +59,18 @@ nav ol li
     padding: 12px 0 12px 0;
 }
 
+.main-wrap
+{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
 .top-head-wrap
 {
-    overflow: auto;
+    width: 100%;
 }
 
 .top-head-message
@@ -73,6 +84,5 @@ nav ol li
 
 .content
 {
-    overflow: auto;
     text-align: center;
 }

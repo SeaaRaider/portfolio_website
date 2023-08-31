@@ -1,11 +1,17 @@
 :root
 {
-    --green: #348d7a;
+    --light-green: #348d7a;
+    --golden: #ffd700;
+    --strong-gray: #363636;
+    --strong-blue: #0047ab;
+    --gmail-red: #db4437;
 }
 
 body
 {
     margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 
 .page
@@ -15,41 +21,82 @@ body
 
 .left-navbar-wrap
 {
+    width: 70px;
     float: left;
     overflow: hidden;
     top: 0;
     left: 0;
     background-color: white;
+    transition: width 0.3s;
+}
+
+.shadow-element
+{
+    box-shadow: 0 0 15px 0 rgba(70, 70, 70, 0.3);
+    clip-path: inset(0 -15px 0 0);
 }
 
 .left-navbar-wrap:hover
 {
+    width: 240px;
     overflow: visible;
-    width: 300px;
 }
 
-.left-navbar-wrap:hover ~ .mainwrap
+.left-navbar-wrap:hover ~ .main-wrap
 {
     opacity: 0.6;
     filter: blur(3px);
+}
+
+.left-navbar-wrap:hover .credentials-name
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.left-navbar-wrap:hover .credentials-info
+{
+    visibility: visible;
+    opacity: 1;
 }
 
 .left-navbar-credentials
 {
     height: 200px;
     border-bottom: 0.5px solid rgb(218, 218, 218);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.credentials-name
+{
+    font-size: 34px;
+    color: var(--light-green);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+.credentials-info
+{
+    margin: 8px 0 0 2px;
+    font-size: 16px;
+    color: black;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
 }
 
 nav
 {
-    height: 600px;
-    width: 100px;
     text-align: center;
 }
 
 nav ol
 {
-    list-style: none;
     padding: 0;
     margin: 0;
 }
@@ -59,25 +106,59 @@ nav ol li
     padding: 12px 0 12px 0;
 }
 
+nav ol li a
+{
+    width: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+    color: black;
+}
+
+nav ol li a:hover
+{
+    background-image: linear-gradient(
+        to right,
+        var(--light-green) 7px,
+        rgba(210, 210, 210, 0.2) 7px
+    );
+}
+
+nav ol li a i.nav-icon
+{
+    font-size: 20px;
+    width: 22px;
+    flex-basis: 50px;
+}
+
+.chosen-page
+{
+    font-weight: 600;
+}
+
+nav ol li a p
+{
+    width: 70px;
+    text-align: left;
+    flex-basis: 150px;
+}
+
 .main-wrap
 {
     width: 100%;
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: -1;
-}
-
-.top-head-wrap
-{
-    width: 100%;
+    transition: 0.3s;
 }
 
 .top-head-message
 {
     padding: 4.5vh;
     text-align: center;
-    background-color: var(--green);
+    background-color: var(--light-green);
     font-size: 50px;
     color: white;
 }

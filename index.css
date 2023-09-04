@@ -28,11 +28,7 @@ body
     left: 0;
     background-color: white;
     transition: width 0.3s;
-}
-
-.shadow-element
-{
-    box-shadow: 0 0 15px 0 rgba(70, 70, 70, 0.3);
+    box-shadow: 0 0 15px 0 rgba(70, 70, 70, 0.4);
     clip-path: inset(0 -15px 0 0);
 }
 
@@ -154,6 +150,12 @@ nav ol li a p
     transition: 0.3s;
 }
 
+.top-head-wrap
+{
+    box-shadow: 0 0 15px 0 rgba(70, 70, 70, 1);
+    clip-path: inset(0 0 -15px 0);
+}
+
 .top-head-message
 {
     padding: 4.5vh;
@@ -165,5 +167,40 @@ nav ol li a p
 
 .content
 {
-    text-align: center;
+    margin-top: 3%;
+    margin-left: 70px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.content-aboutme
+{
+    width: 30%;
+}
+
+.aboutme-header
+{
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.aboutme-header p
+{
+    font-weight: 700;
+    color: var(--light-green);
+    margin: 0;
+}
+
+.aboutme-content
+{
+    font-size: 24px;
+}
+
+.content-image
+{
+    width: 25%;
+    height: 25%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
 }

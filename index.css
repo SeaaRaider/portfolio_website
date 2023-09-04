@@ -175,6 +175,8 @@ nav ol li a p
 
 .content-aboutme
 {
+    padding: 10px 0 10px 40px;
+    border-left: 2px black solid;
     width: 30%;
 }
 
